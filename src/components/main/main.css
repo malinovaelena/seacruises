@@ -1,0 +1,82 @@
+:root {
+    --background-main-color:#f3f3f3;
+    --font-color:#0d3351;
+    --button-color:#33c7fd;
+    --font-family-title:'Roboto Slab Light', arial;
+    --font-main:'Raleway Regular', arial;
+}
+.main {
+    background-color: var(--background-main-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    min-height: 1320px;
+}
+.main__title {
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: var(--font-family-title);
+    color:var(--font-color);
+    font-weight: normal;
+    padding-top: 50px;
+}
+.main__subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: var(--font-family-title);
+    color:var(--font-color);
+    padding-top: 10px;
+}
+.main__filter {
+    font-style: italic;
+}
+.cards-list__show-more {
+    width: 196px;
+    padding: 12px 0px;
+    margin-top: 40px;
+    background-color: var(--button-color);
+    color: #ffffff;
+    border-radius: 1px;
+    text-decoration: none;
+    border:none;
+}
+.cards-container {
+    border:2px solid var(--button-color);
+    min-width: 290px;
+    width: 90%;
+    max-width: 720px;
+    min-height: 1915px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cards-container .card-item:nth-child(n+5):nth-child(-n+8) {
+    display: none;
+}
+@media (min-width:1300px) and (max-width:1599px) {
+    .main__title {
+        font-size: 26px;
+        padding-top: 60px;
+    }
+    .cards-container {
+        width: 55%;
+        min-height: 1039px;
+        max-height: 1040px;
+    }
+}
+@media (min-width:1600px) {
+    .main__title {
+        font-size: 36px;
+        padding-top: 115px;
+    }
+    .cards-container {
+        width: 68%;
+        min-height: 1060px;
+        margin-top: 40px;
+    }
+}
