@@ -7,16 +7,21 @@ export default class Card extends React.Component {
         this.arrOfCards = data;
     }
     render() {
-        return (<article className="card-item">
+        let newfreshcards = this.arrOfCards.map((item) => {
+            console.log(item, 'componentCards');
+            return (<article className="card-item">
         <div className="cards-image__container">
             <img className="cards-image" src={require('./img/test.png')} alt="anapa"/>
         </div>
         <section className="card-item__description">
-            <h4 className="description-name">{ this.arrOfCards.name }</h4>
-            <p className="track-shedule"><b>Маршрут:</b>{ this.arrOfCards.tracking }</p>
-            <p className="duration"><b>Продолжительность:</b>{this.arrOfCards.hour} ч. {this.arrOfCards.minutes} мин.</p>
+            <h4 className="description-name">{ item.name }</h4>
+            <p className="track-shedule"><b>Маршрут:</b>{ item.tracking }</p>
+            <p className="duration"><b>Продолжительность:</b>{item.hour} ч. {item.minutes} мин.</p>
             <p className="price">27 000 руб</p>
         </section>
     </article>)
-    }
+        });
+        console.log(newfreshcards,'newfreshcards componentCARD');
+        return (newfreshcards);
+    };
 };

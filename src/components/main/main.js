@@ -39,25 +39,25 @@ export default class Main extends React.Component {
     cardToRenderPosition += AMOUNT_FOR_RENDER_CARDS;
     };
     */
-
+    
+    state = {
+        amountCard: 2,
+    }
+    increaseAmountOfCards = () => { //увеличить стейт 
+        this.setState({amountCard: this.state.amountCard + 1});
+        console.log(this.state.amountCard,'increaseAmountOfCards');
+    };
+    
     render() {
-        let zero = 1;
-        let item = () => {
-            zero = zero + 5;
-            console.log(zero,'ZERO');
-        };
-        let we = () => {
-            console.log(zero,'ZERO');
-        }
-            //с помощью клика увечичивать переменную которая будет ответстна за массив1!!!
-        //переписать функцию по поводу раскладки массива. В контейнере должно быть - визибл айтемс
-        //заебись все работает1!!!В ВОСКРЕСЕНЬЕ СДЕЛАТЬ ЭТО (ПОКАЗ НОВЫХ КАРТОЧЕК) ПЛЮС ФУТЕР !!!
+        let { amountCard } = this.state;
+        let visibleItems = this.superddata.slice(0, amountCard);
+        console.log(visibleItems,'visibleItems');
         return (<div className="main">
                 <h2 className="main__title">Каталог круизов</h2>
                 <h3 className="main__subtitle">Сортировать круизы по <b className="main__filter">цене</b></h3>
-                <div className="cards-container" onClick={we}>{this.readynewCards(ArrDataOfCards,4)}
+                <div className="cards-container" onClick={this.increaseAmountOfCards}>{<Card data = { visibleItems }/>}
                 </div>
-                <button className="cards-list__show-more" onClick={item}>Показать больше</button>
+                <button className="cards-list__show-more">Показать больше</button>
                 </div>
         )
     }
