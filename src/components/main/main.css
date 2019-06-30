@@ -55,9 +55,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.cards-container .card-item:nth-child(n+5):nth-child(-n+8) {
+/*.cards-container .card-item:nth-child(n+5):nth-child(-n+8) {
     display: none;
-}
+}*/
 @media (min-width:1300px) and (max-width:1599px) {
     .main__title {
         font-size: 26px;
