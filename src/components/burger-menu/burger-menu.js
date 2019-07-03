@@ -32,4 +32,3 @@ export default class BurgerMenu extends React.Component {
         )
     }
 };
-//const { onBtnClickHandler } = this.props;

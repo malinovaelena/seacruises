@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../card';
 import ArrDataOfCards from '../generate-data';
+import PopUp from '../pop-up';
 import './main.css';
 
 
@@ -9,56 +10,62 @@ export default class Main extends React.Component {
         super();
         this.superddata = ArrDataOfCards;
     }
+    
+    state = {
+        amountCard: 4,
+        popup: false,
+    }
+    increaseAmountOfCards = () => { 
+        this.setState({amountCard: this.state.amountCard + 2});
+        console.log(this.state.amountCard,'state');
+        if (this.state.amountCard === 8) {
+            console.log(this.state.amountCard,'if === ready!!!!!!');
+            this.setState({amountCard: this.state.amountCard - 4});
+        };
+    };
+    openPopp = (perem) => {
+        console.log('function for opening popup!!!',perem);
+        if (perem === true) {
+            return (<PopUp dataofEachCard = {this.superddata[1]} close = {this.closepopap}/>);
+        }
+    };
+    changestate = () => {
+        console.log('i change state on true!!!!!!!');
+        this.setState({popup: true});
+    };
+    closepopap = () => {
+        this.setState({popup:false});
+    }
     readynewCards = (arr,amountOfCards) => {
         const  newarr = arr.slice(0, amountOfCards);
         return (
             newarr.map((item) => {
                 console.log(item);
-                return <Card data = {item}/>
+                return <Card data = {item} change={this.changestate}/>//передаем состояние в карточку
             })
         );
     };
-    showMoreCards = () => {
-        //this.readynewCards(this.superddata.slice(0,7));
-        let rrr = this.superddata.slice(0,7);
-        return (
-            rrr.map((item) => {
-                console.log(item,'showMoreCards');
-                return <Card data = {item}/>
-            })
-        )
-    };
-    /*
-    const showMoreCards = (cards) => {
-    console.log('showMoreCards');
-    renderFilms(cards.slice(0, cardToRenderPosition));
-    if (cardToRenderPosition >= cards.length) {
-    showMoreButton.removeEventListener(`click`, onShowMoreButtonClick);
-    showMoreButton.classList.add(`visually-hidden`);
-    }
-    cardToRenderPosition += AMOUNT_FOR_RENDER_CARDS;
-    };
-    */
-    
-    state = {
-        amountCard: 2,
-    }
-    increaseAmountOfCards = () => { //увеличить стейт 
-        this.setState({amountCard: this.state.amountCard + 1});
-        console.log(this.state.amountCard,'increaseAmountOfCards');
+    newclassname = (perem) => {
+        if (perem === true) {
+            return 'notscroll';
+        }
     };
     
     render() {
-        let { amountCard } = this.state;
+        let { amountCard, popup } = this.state;
         let visibleItems = this.superddata.slice(0, amountCard);
         console.log(visibleItems,'visibleItems');
-        return (<div className="main">
-                <h2 className="main__title">Каталог круизов</h2>
+        console.log(amountCard,'amountCard');
+        return (<div className="main" id={this.newclassname(popup)}>
+                {this.openPopp(popup)}
+                <h2 className="main__title" onClick={this.changestate}>Каталог круизов</h2>
                 <h3 className="main__subtitle">Сортировать круизы по <b className="main__filter">цене</b></h3>
-                <div className="cards-container" onClick={this.increaseAmountOfCards}>{<Card data = { visibleItems }/>}
+                <div className="cards-container" >{this.readynewCards(this.superddata,amountCard)}
                 </div>
-                <button className="cards-list__show-more">Показать больше</button>
+                <button className="cards-list__show-more" onClick={this.increaseAmountOfCards}>{amountCard >= 8 ?'Скрыть':'Показать больше'}</button>
+                
                 </div>
         )
-    }
+    };
 };
+//<PopUp dataofEachCard = {this.superddata[0]}/>

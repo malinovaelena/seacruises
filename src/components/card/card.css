@@ -2,9 +2,25 @@
     width: 100%;
     max-width: 345px;
     height: 465px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column; 
     background-color: #ffffff;
+}
+.card-item {
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0.5s; /*Скорость перехода состояния элемента*/
+    animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0s; /* Задержка перед началом */
+}
+@keyframes show{
+    0% {
+      opacity:0;
+    }
+    100% {
+    opacity:1;
+    }
 }
 .cards-image__container {
     width: 100%;
@@ -29,24 +45,26 @@
     position: relative;
     width: max-content;
     max-width: 90%;
-}
-.description-name::after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    top:7px;
-    right:-15px;
-	border-top: 5px solid transparent;
-	border-left: 10px solid red;
-	border-bottom: 5px solid transparent;
+    margin-right: 0px;
 }
 .track-shedule,
 .duration {
     font-size: 14px;
+    white-space: wrap;
+    max-width: 90%;
 }
 .price {
     font-size: 30px;
+}
+.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: 1px;
+    margin-left: 5px;
+	border-top: 4px solid transparent;
+	border-left: 6px solid #00a2dd;
+    border-bottom: 4px solid transparent;
 }
 @media (min-width:1300px) and (max-width:1599px) {
     .card-item {
@@ -58,6 +76,10 @@
     }
     .card-item__description {
         height: 210px;
+    }
+    .description-name:hover {
+        color: #00a2dd9a;
+        cursor: pointer;
     }
 }
 @media (min-width:1600px) {

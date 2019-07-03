@@ -43,6 +43,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .header-middle {
     width: 75%;
@@ -68,8 +69,11 @@ ul {
     position: relative;
     top:10px;
     width: 20px;
-    height: 2px;
-    background-color:var(--font-color);
+    height: 0px;
+    margin-top:2px;
+    background-color:#0d3351;
+    border-top: 1px #0d3351 dotted;
+    border-bottom: 1px #0d3351 dotted;
 }
 .burger-menu__button::before,
 .burger-menu__button::after {
@@ -145,7 +149,6 @@ ul {
     margin:0px auto;
     width: 80px;
     height:80px;
-    border:2px solid red;
 }
 .header-middle__button {
     width: 196px;

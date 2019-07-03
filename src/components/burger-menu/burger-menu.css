@@ -1,0 +1,10 @@
+.burger-menu {
+    width:420px!important;
+    position: absolute;
+    top:20px;
+    border-radius: 1px;
+}
+.burger-menu > li {
+    padding:15px 0px 15px 20px;
+    text-align: left;
+}

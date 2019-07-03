@@ -1,5 +1,6 @@
 import React from 'react';
 import BurgerMenu from '../burger-menu';
+import Logo from './logo';
 import './header.css';
 
 class Header extends React.Component {
@@ -71,7 +72,7 @@ class Header extends React.Component {
                </nav>
                <div className="header-middle">
                    <a className="header__logo" href="https://yandex.ru">
-                      <img src="https://s4.aconvert.com/convert/p3r68-cdx67/cb04a-0b7eq.svg" alt=""/>
+                      <Logo/>
                    </a>
                    <h3>Морские прогулки</h3>
                    <h2>по черному морю</h2>

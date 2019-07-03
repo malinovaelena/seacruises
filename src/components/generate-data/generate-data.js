@@ -25,6 +25,11 @@ const renderRandomHour = () => {
     let hour = Math.floor(Math.random() * 23 + 1);
     return hour;
 };
+const pathToPick = () => {
+    let arrOfPick = ['anapa.jpg','bitch.png','gelendgik-planch.png','kraj.jpeg','krasnor.jpg','lake.png','mayak.png'];
+    let randomPick = arrOfPick[getRandomNumber(arrOfPick)];
+    return randomPick;
+}
 const amoutOfCards = 8;
 const ArrDataOfCards = [];
 for (let i = 0; i < amoutOfCards; i++) {
@@ -33,6 +38,7 @@ for (let i = 0; i < amoutOfCards; i++) {
         tracking:renderTrackShedule(),
         minutes:renderRandomMinute(),
         hour:renderRandomHour(),
+        pic:pathToPick(),
     });
 };
 //console.log(arrDataOfCards);
