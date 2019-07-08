@@ -7,16 +7,12 @@ import Footer from '../footer';
 
 export default class App extends React.Component {
     render() {
-        //console.log(ArrDataOfCards);
         return (
             <div>
-                
                 <Header/>
                 <Main />
                 <Footer />
             </div>
         );
-    };
-    
+    };  
 };
-//<Popup dataofEachCard = {ArrDataOfCards[1]}/>

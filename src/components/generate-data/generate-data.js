@@ -29,7 +29,11 @@ const pathToPick = () => {
     let arrOfPick = ['anapa.jpg','bitch.png','gelendgik-planch.png','kraj.jpeg','krasnor.jpg','lake.png','mayak.png'];
     let randomPick = arrOfPick[getRandomNumber(arrOfPick)];
     return randomPick;
-}
+};
+const idRender = (perem) => {
+    let idArr = ['anapa','gelendgik','krasnodar','sochi','eisk','krim','odessa','krasnyapolyna'];
+    return idArr[perem];
+};
 const amoutOfCards = 8;
 const ArrDataOfCards = [];
 for (let i = 0; i < amoutOfCards; i++) {
@@ -39,6 +43,7 @@ for (let i = 0; i < amoutOfCards; i++) {
         minutes:renderRandomMinute(),
         hour:renderRandomHour(),
         pic:pathToPick(),
+        id:idRender(i),
     });
 };
 //console.log(arrDataOfCards);

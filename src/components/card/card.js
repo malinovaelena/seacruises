@@ -3,30 +3,37 @@ import './card.css';
 import PopUp from '../pop-up';
 
 export default class Card extends React.Component {
-    constructor({data,change}) {
+    constructor({dataOfEachCard}) {
         super();
-        this.arrOfCards = data;
-        this.change = change;
+        this.arrOfCards = dataOfEachCard;
     }
-    functionPopup = () => {
-        console.log(this.arrOfCards);
-        return (<PopUp dataofEachCard = {this.arrOfCards}/>);
-    };
     state = {
-        popup: false,
+        isModalOpen: false,
+        isPositionFixed:'card-item',
     }
-    
-    changestate = () => {
-        console.log('i change state on true!!!!!!!');
-        this.setState({popup: true});
+    toggleModal = () => {
+        this.setState({ isModalOpen: !this.state.isModalOpen});
+        console.log(this.state.isModalOpen,'state.isModalOpen');
+    };
+
+    consolelogstate = () => {
+        console.log('consolelogstate + card',this.state.pop);
+    }
+    addClass = () => {
+        if (this.state.isModalOpen === true) {
+            console.log(this.state.isPositionFixed);
+            this.setState({ isPositionFixed:'card-item fixstate'});
+        }
+        //return this.state.isPositionFixed;
     }
     render() {
-            return (<article className="card-item">
+            return (<article className={this.state.isPositionFixed} key = {this.arrOfCards.id}>
+                {this.state.isModalOpen === true? <PopUp dataof = {this.arrOfCards} consol={this.toggleModal}/>:''}
         <div className="cards-image__container">
             <img className="cards-image" src={require ('./img/' + this.arrOfCards.pic)} alt="anapa"/>
         </div>
         <section className="card-item__description">
-            <h4 className="description-name" onClick={this.change}>{ this.arrOfCards.name }<b className="arrow-right"></b></h4>
+            <h4 className="description-name" onClick={this.toggleModal}>{ this.arrOfCards.name }<b className="arrow-right"></b></h4>
             
             <p className="track-shedule"><b>Маршрут: </b>{ this.arrOfCards.tracking }</p>
             <p className="duration"><b>Продолжительность: </b>{this.arrOfCards.hour} ч. {this.arrOfCards.minutes} мин.</p>
@@ -35,3 +42,4 @@ export default class Card extends React.Component {
     </article>)
     };
 };
+//perem = {this.state.isModalOpen}
