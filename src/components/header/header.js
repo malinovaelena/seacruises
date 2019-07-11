@@ -76,11 +76,10 @@ class Header extends React.Component {
                    </a>
                    <h3>Морские прогулки</h3>
                    <h2>по черному морю</h2>
-                   <a href="https://yandex.ru" className="header-middle__button">Выбрать круиз</a>
+                   <a href="#tomain" className="header-middle__button">Выбрать круиз</a>
                </div>
            </header>
         )
     }
 };
 export default Header;
-///подумать над классами!!! как лучше!!!! 

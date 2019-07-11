@@ -34,6 +34,15 @@ const idRender = (perem) => {
     let idArr = ['anapa','gelendgik','krasnodar','sochi','eisk','krim','odessa','krasnyapolyna'];
     return idArr[perem];
 };
+const priceRender = (perem) => {
+    let pricesArr = ['15 000', '25 000', '11 000','12 000', '32 000', '16 000', '19 500', '23 000'];
+    return pricesArr[perem];
+}
+const popularRender = (perem) => {
+    let popularArr = [5,0,12,43,5,8,5,2,14]
+    return popularArr[perem];
+}
+const textInPopup = 'Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40 Отправление из Абрау-Дюрсо: ежедневно в 12:25, 14:05, 15:45, 17:25, 19:05  Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнездо. Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"';
 const amoutOfCards = 8;
 const ArrDataOfCards = [];
 for (let i = 0; i < amoutOfCards; i++) {
@@ -44,8 +53,9 @@ for (let i = 0; i < amoutOfCards; i++) {
         hour:renderRandomHour(),
         pic:pathToPick(),
         id:idRender(i),
+        price:priceRender(i),
+        popular:popularRender(i),
+        description:textInPopup,
     });
 };
-//console.log(arrDataOfCards);
-
 export default ArrDataOfCards;
