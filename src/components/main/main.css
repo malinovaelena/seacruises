@@ -29,12 +29,11 @@
     font-size: 20px;
     font-family: var(--font-family-title);
     color:var(--font-color);
-    font-weight: normal;
     padding-top: 50px;
+    font-weight: bold;
 }
 .main__subtitle {
     font-size: 14px;
-    font-weight: normal;
     font-family: var(--font-family-title);
     color:var(--font-color);
     padding-top: 10px;

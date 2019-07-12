@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import './footer.css';
 
@@ -16,10 +17,10 @@ export default class Footer extends React.Component {
                     <ul className="social-list">
                         <li>Будь на связи:</li>
                         <li>
-                            <a className="social-item vk" href=""></a>
-                            <a className="social-item ok" href=""></a>
-                            <a className="social-item youtube" href=""></a>
-                            <a className="social-item insta" href=""></a>
+                            <a className="social-item vk" href="#test"></a>
+                            <a className="social-item ok" href="#test"></a>
+                            <a className="social-item youtube" href="#test"></a>
+                            <a className="social-item insta" href="#test"></a>
                         </li>
                     </ul>
                 </li>

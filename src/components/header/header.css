@@ -1,9 +1,3 @@
-:root {
-    --font-color:#0d3351;
-    --button-color:#33c7fd;
-    --font-family-title:'Roboto Slab Light', arial;
-    --font-main:'Raleway Regular', arial;
-}
 h2,h3,a {
     margin: 0px;
 }
@@ -57,13 +51,11 @@ ul {
 .header-middle h3 {
     font-size: 20px;
     font-family: var(--font-family-title);
-    font-weight: lighter;
 }
 .header-middle h2 {
     font-size: 50px;
     text-transform: uppercase;
     font-family: var(--font-family-title);
-    font-weight: lighter;
 }
 .burger-menu__button {
     position: relative;

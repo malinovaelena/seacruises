@@ -1,6 +1,7 @@
 .footer {
     background-color: #ffffff;
     width:100%;
+    font-family: var(--font-main);
 }
 .footer-menu {
     margin:30px auto;

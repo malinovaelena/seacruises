@@ -2,3 +2,18 @@ body {
     margin:0px;
     padding:0px;
 }
+:root {
+    --font-color:#0d3351;
+    --button-color:#33c7fd;
+    --font-family-title:'Roboto Slab Light', arial;
+    --font-main:'Raleway Regular', arial;
+}
+@font-face {
+    font-family: 'Roboto Slab Light', arial;
+    font-family: 'Raleway Regular', arial;
+    src:url('../fonts/RobotoSlab.ttf');
+    /*src:url('../fonts/RobotoSlab-Thin.ttf');*/
+    src:url('../fonts/ralewayregular.woff');
+    font-weight: normal, bold;
+    font-style: normal;
+}
