@@ -5,5 +5,3 @@ import ArrDataOfCards from './components/generate-data';
 
 ReactDOM.render(<App />,
     document.getElementById('root'));
-
-console.log(ArrDataOfCards);
