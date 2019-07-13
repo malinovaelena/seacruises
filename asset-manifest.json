@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b6a61ac8.chunk.css",
+    "main.js": "/static/js/main.496ba1f6.chunk.js",
+    "main.js.map": "/static/js/main.496ba1f6.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.ff6fd18e.chunk.js": "/static/js/2.ff6fd18e.chunk.js",
+    "static/js/2.ff6fd18e.chunk.js.map": "/static/js/2.ff6fd18e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.423c611c7cb2c6b9c159e4c6e827b8ee.js": "/precache-manifest.423c611c7cb2c6b9c159e4c6e827b8ee.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b6a61ac8.chunk.css.map": "/static/css/main.b6a61ac8.chunk.css.map",
+    "static/media/anapa.jpg": "/static/media/anapa.d5c042d2.jpg",
+    "static/media/bitch.png": "/static/media/bitch.af18ef3c.png",
+    "static/media/gelendgik-planch.png": "/static/media/gelendgik-planch.925490b8.png",
+    "static/media/header.css": "/static/media/header-bg.37dd8857.png",
+    "static/media/footer.css": "/static/media/yt.77facc1d.ico",
+    "static/media/kraj.jpeg": "/static/media/kraj.438bdbf0.jpeg",
+    "static/media/krasnor.jpg": "/static/media/krasnor.21afae08.jpg",
+    "static/media/lake.png": "/static/media/lake.7cf5c219.png",
+    "static/media/mayak.png": "/static/media/mayak.289281c5.png",
+    "static/media/sun.png": "/static/media/sun.f1c3cd2e.png",
+    "static/media/Софиядаункурит.jpg": "/static/media/Софиядаункурит.4c282663.jpg"
+  }
+}
